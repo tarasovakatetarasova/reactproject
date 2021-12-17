@@ -1,0 +1,13 @@
+.cards {
+    position: relative;
+    top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.card {
+    border: 1px solid red;
+    padding: 8px;
+    margin: 8px;
+}

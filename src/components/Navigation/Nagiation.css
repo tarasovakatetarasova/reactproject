@@ -1,0 +1,37 @@
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navigation__links {
+    display: flex;
+}
+
+.navigation__links > li {
+    padding: 8px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+}
+
+.auth-button {
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 60px 20px #00000040;
+    display: flex;
+    justify-content: center;
+    margin: 12px 8px;
+    padding: 12px;
+    color: white;
+}
