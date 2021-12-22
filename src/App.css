@@ -1,4 +1,15 @@
 .App {
     position: relative;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+}
+
+.create__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+}
+
+main {
+    margin-bottom: 24px;
 }

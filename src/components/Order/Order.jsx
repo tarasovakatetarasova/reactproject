@@ -30,7 +30,7 @@ const Order = () => {
                    type="text"
                    value={phone}
                    onChange={(e) => setPhone(e.target.value)}
-                   placeholder="+7937888888"
+                   placeholder="+7"
             />
             <input
                 required

@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {Link, useParams} from "react-router-dom";
 import {AppContext} from "../../App";
+import '../Product/Product.css'
 
 const Product = () => {
     const {products} = useContext(AppContext)
@@ -11,30 +12,32 @@ const Product = () => {
     if (!currentProduct) {
         return (
             <div>
-                <h1>Not found</h1>
-                <Link to="/shop">Go to Shop</Link>
+                <h1>Такого товара не существует!</h1>
+                <Link to="/shop">Вернуться в магазин</Link>
             </div>
         )
     }
 
-    const {title, price, image, description} = currentProduct
-
-
+    const {title, price, image, description, warranty, color, type} = currentProduct
     return (
         <div>
             <img src={image} alt={title + price}/>
-            <h3>{title}</h3>
+            <h2>{title}</h2>
             <p className="price">{price}</p>
             <p>{description}</p>
-            <div>Parameters</div>
+            <h3>Характеристики:</h3>
             <ul>
-                <li>размер</li>
-                <li>гарантия</li>
-                <li>цвет</li>
+                <li>Тип гитары: {type}</li>
+                <li>Цвет: {color}</li>
+                <li>Гарантия: {warranty}</li>
             </ul>
+            <Link to={`/shop`}>
+                <button>Назад</button>
+            </Link>
             <Link to={`/order/${id}`}>
                 <button>Оставить заявку</button>
             </Link>
+
         </div>
     );
 };

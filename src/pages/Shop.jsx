@@ -6,6 +6,8 @@ const Shop = () => {
     const {products} = useContext(AppContext)
 
     return (
+        <>
+            <h1>MUZICALITY - МАГАЗИН ПРО МУЗЫКУ</h1>
         <div className="cards">
             {products.map((card) => {
                 return (
@@ -13,6 +15,7 @@ const Shop = () => {
                 )
             })}
         </div>
+        </>
     )
 };
 

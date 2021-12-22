@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: #1B2473;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form {
+    background: #ffffff;
+    padding: 4px 76px;
+    box-shadow: 0 0 40px 10px #00000040;
+    border-radius: 20px;
+    min-height: 300px;
+    justify-content: center;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 50px;
+    color: #787878;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    margin: 4px -58px;
+    position: relative;
+}
+
+.form__input > input::placeholder {
+    color: #ccc;
+    font-size: 14pt;
+}
+
+.form__input::before {
+    content: "*";
+    color: #524e4e;
+    position: absolute;
+    left: -10px;
+    top: 30%;
+}
+.form__input > label {
+    color:#787878;
+    font-size: 14pt;
+    /*font-family: 'Franklin Gothic Medium';*/
+    margin-bottom: 4px;
+}
+
+.form__input > input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #787878;
+    color: #524e4e;
+}
+
+.form__input > span {
+    color: red;
+    opacity: 0;
+    display: block;
+    margin: 4px;
+}
+
+/*.form__checkbox > span {*/
+/*    color: red;*/
+/*    opacity: 0;*/
+/*    display: block;*/
+/*    margin-top: 24px;*/
+
+/*}*/
+
+/*.form__checkbox {*/
+/*    display: block;*/
+/*    margin: 8px -32px;*/
+/*    left: -24px;*/
+/*    position: relative;*/
+/*}*/
+
+.form__checkbox > label {
+    display: block;
+    margin: -18px 30px;
+    left: -10px;
+    position: relative;
+}
+
+.form__checkbox::before {
+    content: "*";
+    position: absolute;
+    left: -10px;
+    top: 5%;
+    color: #524e4e;
+}
+
+.form__button {
+    background-color: #262697;
+    padding: 8px 42px;
+    width: fit-content;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18pt ;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium';
+    display: block;
+    margin: 16px auto;
+    text-align: center;
+}
+
+
+/* КЛАССЫ ДЛЯ ОШИБОК*/
+
+.error-before::before {
+    color: red;
+}
+
+.error-color {
+    color: red !important;
+}
+
+.error-border {
+    border: 1px solid red !important;
+}
+
+.error {
+    opacity: 1 !important;
+}
+
+
+/*@media screen and (max-width:768px) and (min-width:320px) {*/
+/*    body {*/
+/*        background: #1B2473;*/
+/*    }*/
+
+/*    .form {*/
+/*        position: fixed;*/
+/*        width: 90%;*/
+/*        height: 450px;*/
+/*        left: 5%;*/
+/*        right: 5%;*/
+/*        top: 20px;*/
+
+/*        background: #FFFFFF;*/
+/*        box-shadow: 0px 0px 40px 10px #00000040;*/
+/*        border-radius: 20px;*/
+/*    }*/
+
+/*    h3 {*/
+/*        position: fixed;*/
+/*        text-align: center;*/
+/*        width: 30%;*/
+/*        height: 50px;*/
+/*        left: 35%;*/
+/*        right: 15%;*/
+/*        top: -20px;*/
+/*        font-family: Roboto;*/
+/*        font-style: normal;*/
+/*        font-weight: bold;*/
+/*        font-size: 35pt;*/
+/*        line-height: 50px;*/
+/*        color: #787878;*/
+/*    }*/
+
+/*    .form__input-email {*/
+/*        position: fixed;*/
+/*        width: 78vw;*/
+/*        height: 30px;*/
+/*        left: 10vw;*/
+/*        top: 95px;*/
+/*        border-color: #ccc;*/
+/*        border-radius: 10px;*/
+/*        font-size: 22px;*/
+/*    }*/
+
+/*    .form__input-email::placeholder {*/
+/*        color: #ccc;*/
+/*        font-size: 15pt;*/
+/*    }*/
+
+/*    .form__label-email {*/
+/*        position: fixed;*/
+/*        width: 75vw;*/
+/*        height: 50px;*/
+/*        left: 10vw;*/
+/*        top: 73px;*/
+/*        color:#787878;*/
+/*        font-size: 14pt;*/
+/*        font-family: 'Franklin Gothic Medium';*/
+/*    }*/
+
+/*    .form__input-password::placeholder {*/
+/*        color: #ccc;*/
+/*        font-size: 15pt;*/
+/*    }*/
+
+/*    .form__input-password {*/
+/*        position: fixed;*/
+/*        width: 78vw;*/
+/*        height: 30px;*/
+/*        left: 10vw;*/
+/*        top: 170px;*/
+/*        border-color: #ccc;*/
+/*        border-radius: 10px;*/
+/*        font-size: 22px;*/
+/*    }*/
+
+/*    .form__label-password {*/
+/*        position: fixed;*/
+/*        width: 75vw;*/
+/*        height: 50px;*/
+/*        left: 10vw;*/
+/*        top: 148px;*/
+/*        color:#787878;*/
+/*        font-size: 14pt;*/
+/*        font-family: 'Franklin Gothic Medium';*/
+/*    }*/
+
+/*    .form__checkbox {*/
+/*        position: fixed;*/
+/*        width: 10vw;*/
+/*        height: 15px;*/
+/*        left: 6vw;*/
+/*        top: 210px;*/
+/*    }*/
+
+/*    .form__checkbox-label {*/
+/*        position: fixed;*/
+/*        width: 90vw;*/
+/*        height: 18px;*/
+/*        left: 15%;*/
+/*        top: 216px;*/
+/*        color: #787878;*/
+/*        font-size: 9pt;*/
+/*        font-family:'Franklin Gothic Medium';*/
+/*    }*/
+
+/*    .form__button {*/
+/*        position: fixed;*/
+/*        text-align: center;*/
+/*        width: 40vw;*/
+/*        height: 55px;*/
+/*        left: 30%;*/
+/*        top: 270px;*/
+/*        background-color: #262697;*/
+/*        color: #ffffff;*/
+/*        font-size: 18pt ;*/
+/*        border: none;*/
+/*        border-radius: 10px;*/
+/*        font-family: 'Franklin Gothic Medium';*/
+/*    }*/
+/*}*/

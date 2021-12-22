@@ -10,7 +10,9 @@ const Card = ({card}) => {
             <img src={image} alt={title + price}/>
             <h3>{title}</h3>
             <p className="price">{price}</p>
-            <Link to={`/product/${id}`}><button>Подробнее</button></Link>
+            <Link to={`/product/${id}`}>
+                <button>Подробнее</button>
+            </Link>
         </div>
     )
 }

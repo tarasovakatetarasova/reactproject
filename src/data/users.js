@@ -7,4 +7,4 @@ export const users = [
         login: 'user',
         password: 'user'
     }
-]
+    ]
