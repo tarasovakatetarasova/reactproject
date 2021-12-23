@@ -1,14 +1,15 @@
 import React, {useContext, useState} from 'react';
 import {AppContext} from "../App";
-import {Link, useNavigate} from "react-router-dom";
-import Login from "../components/Login/Login";
+import {useNavigate} from "react-router-dom";
+import Login from "./Login";
+import Shop from "./Shop";
+import '../styles/FormStyle.css'
 
 const Create = () => {
     let navigate = useNavigate();
     const [id, setId] = useState('')
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
-    const [image, setImage] = useState('')
 
     const {isAuth, setProducts} = useContext(AppContext)
 
@@ -21,39 +22,42 @@ const Create = () => {
             //прерывание - делаем инпут управляемым
             e.preventDefault()
             const newPost = {
-                id: id, title: title, price: price, image: image
+                id: id,
+                title: title,
+                price: price,
             }
 
             setProducts(prevState => [...prevState, newPost])
 
             console.log('newPost', newPost)
-            return navigate('/')
+            return (
+                <Shop />
+            )
         }
 
-        return (<form onSubmit={createPost} className="create__post">
-            <input type="text"
+        return (<form onSubmit={createPost} className="form">
+            <h3 className="form__title">Добавить товар:</h3>
+            <label className="form__label">Название товара</label>
+            <input className="form__input"
+                   type="text"
                 //забираем поведение инпута
                    required
-                   value={id}
-                   onChange={(e) => setId(e.target.value)}/>
-            <input type="text"
-                   required
                    value={title}
-                // при попытке изменения - передем значение в setTitle
-                   onChange={(e) => setTitle(e.target.value)}/>
-            <input type="text"
+                   onChange={(e) => setId(e.target.value)}/>
+            <label className="form__label">Цена товара</label>
+            <input className="form__input"
+                   type="text"
                    required
                    value={price}
-                   onChange={(e) => setPrice(e.target.value)}/>
-            <input type="file"
+                // при попытке изменения - передем значение в setTitle
+                   onChange={(e) => setTitle(e.target.value)}/>
+            <label className="form__label">Номер товара</label>
+            <input className="form__input"
+                   type="text"
                    required
-                   value={image}
-                   onChange={(e) => setImage(e.target.value)}/>
-
-            <button type="submit">OK</button>
-            <Link to="/login">
-                <button type="submit">Назад</button>
-            </Link>
+                   value={id}
+                   onChange={(e) => setPrice(e.target.value)}/>
+            <button className="form__button" type="submit" onSubmit={createPost}>OK</button>
 
         </form>);
     };

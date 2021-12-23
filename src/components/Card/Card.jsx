@@ -8,10 +8,10 @@ const Card = ({card}) => {
     return (
         <div className="card">
             <img src={image} alt={title + price}/>
-            <h3>{title}</h3>
+            <h3 className="card__title">{title}</h3>
             <p className="price">{price}</p>
             <Link to={`/product/${id}`}>
-                <button>Подробнее</button>
+                <button className="card__button">Подробнее</button>
             </Link>
         </div>
     )
