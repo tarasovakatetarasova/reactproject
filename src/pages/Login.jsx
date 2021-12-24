@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {AppContext} from "../App";
-import "../styles/FormStyle.css"
+import "../styles/Login.css"
 import Private from "./Private";
 import {users} from "../data/users";
 
@@ -12,8 +12,6 @@ const Login = () => {
 
     function submitOrder(e) {
         e.preventDefault()
-        console.log("login", login)
-        console.log("password", password)
         const currentUser = users.find(item => item.login === login)
 
         if (!currentUser) {

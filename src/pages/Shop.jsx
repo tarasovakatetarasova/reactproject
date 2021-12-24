@@ -8,7 +8,6 @@ const Shop = () => {
     return (
         <>
             <h1 className="title">MUZICALITY - МАГАЗИН ПРО МУЗЫКУ</h1>
-            <h2 className="title">Товары:</h2>
         <div className="cards">
             {products.map((card) => {
                 return (

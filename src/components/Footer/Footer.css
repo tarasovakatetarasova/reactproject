@@ -1,0 +1,30 @@
+footer {
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    border-top: 1px solid teal;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+    background: #e0e8f3;
+    padding-bottom: 8px;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0 33%;
+    margin: 8px;
+    font-family: Arial;
+}
+
+.footer__title {
+    font-family: Century;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.footer__info {
+    font-family: Century;
+}

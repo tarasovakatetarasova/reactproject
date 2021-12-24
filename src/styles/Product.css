@@ -2,6 +2,8 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center;
 }
 
 .product__image {
@@ -41,5 +43,17 @@
     margin: 12px 0;
     font-size: 18px;
     font-weight: 500;
+}
 
+.error__product {
+    text-align: center;
+    margin-top: 210px;
+    font-family: Century;
+    font-size: 46px;
+    text-shadow: 2px 2px 4px #22a6a6;
+}
+
+.error__button {
+    display: block;
+    margin: 20px 600px 230px;
 }

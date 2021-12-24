@@ -1,0 +1,54 @@
+.create {
+    background: #ffffff;
+    padding: 16px 72px;
+    box-shadow: 0 0 40px 10px #00000040;
+    border-radius: 20px;
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-content: center;
+    margin: 100px 25vw 0;
+}
+
+.create__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 50px;
+    color: #787878;
+    text-align: center;
+    margin: 8px 0;
+    letter-spacing: 2px;
+}
+
+.create__label {
+    color: #787878;
+    font-size: 14pt;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.create__input {
+    margin: 12px 12px;
+    padding: 8px 16px;
+    width: 100%;
+    outline: none;
+    border: 1px solid teal;
+    border-radius: 4px;;
+
+}
+
+.create__button {
+    background-color: #131365;
+    padding: 8px 24px;
+    width: fit-content;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 4px auto;
+    text-align: center;
+}
+
+

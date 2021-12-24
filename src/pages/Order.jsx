@@ -19,9 +19,11 @@ const Order = () => {
 
         localStorage.setItem('order', JSON.stringify(order))
         alert('Заявка отправлена!')
-        setPhone('')
+        setPhone('+7')
         setName('')
-        return <Shop/>
+        return (
+            <Shop/>
+        )
     }
 
     return (

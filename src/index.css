@@ -22,17 +22,6 @@ ul {
     list-style: none;
 }
 
-/*.create__post {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    width: 500px;*/
-/*}*/
-
-main {
-    margin: 74px 24px 24px;
-}
-
 button {
     width: fit-content;
     padding: 8px 16px;
@@ -46,10 +35,19 @@ button {
     border: none;
 }
 
-/*input {*/
-/*    padding: 8px 16px;*/
-/*    outline: none;*/
-/*    border: 1px solid teal;*/
-/*    margin: 8px 0;*/
-/*    border-radius: 4px;*/
-/*}*/
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #040126;
+}
+
+a:active {
+    color: #0e0854;
+}
+
+a:active {
+    color: #0e0854;
+}

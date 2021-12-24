@@ -12,8 +12,8 @@ const Product = () => {
     if (!currentProduct) {
         return (
             <div>
-                <h1 className="product__title">Такого товара не существует!</h1>
-                <Link to="/shop"><button>Вернуться в магазин</button></Link>
+                <h1 className="error__product">Такого товара не существует!</h1>
+                <Link to="/shop"><button className="error__button">Вернуться в магазин</button></Link>
             </div>
         )
     }

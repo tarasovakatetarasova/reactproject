@@ -13,30 +13,31 @@ const Private = () => {
     if (!isAuth) {
         return (
             <Login/>
-        )}
+        )
+    }
 
-        if (!order) {
-            return (
-                <div className="empty">
-                    <h1>Заявок нет!</h1>
-                    <Link to="/login">
-                        <button type="submit">Назад</button>
-                    </Link>
-                </div>
-            )
-        }
-
-        const {name, phone, productId} = JSON.parse(order)
-        const product = products.find(item => item.id == productId)
-
+    if (!order) {
         return (
-            <div className="order">
-                <h2 className="order__title">ЗАЯВКА</h2>
-                <h3 className="order__user">Имя: {name}</h3>
-                <h4 className="order__user">Номер телефона: {phone}</h4>
-                <h4 className="order__info">Номер товара: {productId}</h4>
-                <h4 className="order__info">Цена: {product.price}</h4>
+            <div className="empty">
+                <h1 className="empty__private">Заявок нет!</h1>
+                <Link to="/shop">
+                    <button className="empty__button" type="submit">Назад</button>
+                </Link>
             </div>
-        );
-    };
+        )
+    }
+
+    const {name, phone, productId} = JSON.parse(order)
+    const product = products.find(item => item.id == productId)
+
+    return (
+        <div className="order">
+            <h2 className="order__title">ЗАЯВКА</h2>
+            <h3 className="order__user">Имя: {name}</h3>
+            <h4 className="order__user">Номер телефона: {phone}</h4>
+            <h4 className="order__info">Номер товара: {productId}</h4>
+            <h4 className="order__info">Цена: {product.price}</h4>
+        </div>
+    );
+};
 export default Private;
